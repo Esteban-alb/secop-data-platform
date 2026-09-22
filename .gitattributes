@@ -1,0 +1,16 @@
+# Normaliza finales de linea: LF en el repositorio,
+# lo que corresponda al sistema en el disco de cada quien.
+* text=auto
+
+# Archivos que siempre deben usar LF
+*.py    text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.json  text eol=lf
+*.md    text eol=lf
+*.sql   text eol=lf
+
+# Binarios: no tocar
+*.parquet binary
+*.png     binary
+*.jpg     binary
