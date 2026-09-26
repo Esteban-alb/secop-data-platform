@@ -77,6 +77,12 @@ el insumo de las tres primeras.
 * **Redundancia por capa.** Bronze es reconstruible desde la fuente;
   gold no. Eso debería reflejarse en la elección de LRS o ZRS.
 
+> **Nota de acoplamiento:** las decisiones de incrementalidad y de
+> deduplicación dependen la una de la otra. Si la deduplicación es por
+> versión del registro, la columna que marca la versión y la que sirve de
+> marca de agua pueden ser la misma o estar relacionadas. Se decidirán en
+> conjunto, y los ADR resultantes deben citarse entre sí.
+
 ## Alcance: lo que este proyecto no hace
 
 Declararlo evita expectativas equivocadas y es parte de la honestidad
@@ -90,9 +96,13 @@ del portafolio.
   RPO/RTO definidos ni validación legal para el tratamiento de datos
   personales.
 * **No usa Data Factory ni Synapse.** Son las herramientas gestionadas
-  habituales para esto; se descartaron por costo y porque el objetivo
-  incluye demostrar la lógica escrita en código. El razonamiento queda
-  en el ADR correspondiente.
+  habituales para este tipo de carga. El motivo principal del descarte es
+  de propósito: el objetivo del proyecto incluye demostrar la lógica de
+  ingesta y transformación escrita en código, no configurada en una
+  interfaz visual. El costo es un factor secundario y **aún no está
+  medido**; la decisión se documentará en un ADR que incluya esa
+  medición, y es posible que la medición muestre que el costo no era un
+  argumento relevante.
 
 ## Competencias que el proyecto demuestra
 
