@@ -101,8 +101,12 @@ de incrementalidad, esquema de particionado y formato de archivo.
 El plan completo, las fases y las decisiones abiertas están en
 `docs/roadmap.md`. Consúltalo antes de proponer trabajo nuevo.
 
-## Plan general
+## Alcance de este repositorio
 
-23 semanas. Fase 0 arranque · semanas 2-9 el pipeline · 10-12
-calidad e infraestructura como código · 13-18 arquitectura de eventos ·
-19-23 Spark y Delta Lake.
+Este repositorio contiene **un solo proyecto**: la plataforma de ingesta
+por lotes descrita en `docs/roadmap.md`. Ese documento es la única
+fuente de verdad sobre fases, alcance y decisiones.
+
+Hay otros proyectos previstos en mi formación —arquitectura orientada a
+eventos, y Spark con Delta Lake— que vivirán en repositorios separados.
+No forman parte del alcance de este y no deben proponerse aquí.
