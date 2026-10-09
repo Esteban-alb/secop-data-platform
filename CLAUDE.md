@@ -83,20 +83,16 @@ Ficha: https://www.datos.gov.co/d/jbjy-vk9h
 Fase 0 completada: entorno, repositorio con flujo de pull requests, Azure
 configurado con presupuesto, ADR 0001 sobre selección de región.
 
-**En curso:** perfilado inicial del dataset (Día 5). Preguntas abiertas
-que debe responder el perfilado:
+Fase 1 en curso. Perfilado inicial del dataset completado: notebook en
+`notebooks/00-exploracion.ipynb`, hallazgos en `docs/hallazgos-calidad.md`,
+muestra en `data/samples/`. En resumen: no hay marca de agua confiable,
+`id_contrato` es la clave de negocio y los nulos disfrazados están extendidos.
 
-1. Volumen total y número de columnas.
-2. Qué columna sirve de marca de agua (última modificación).
-3. Clave de negocio única para deduplicar.
-4. Porcentaje de nulos por columna.
-5. Nulos disfrazados (`"No definido"`, `"N/A"`, `""`, `"NO APLICA"`).
-6. Formatos distintos de NIT y de valores monetarios.
-7. Consistencia de formatos y zona horaria en las fechas.
-8. Normalización de nombres de entidades.
-
-**Siguiente después del perfilado:** tres ADR de la Fase 1 — estrategia
-de incrementalidad, esquema de particionado y formato de archivo.
+**Siguiente:** tres ADR de la Fase 1 — estrategia de incrementalidad, esquema
+de particionado y formato de archivo — con los hallazgos como insumo. Antes del
+ADR de incrementalidad conviene hacer la verificación pendiente con dos
+descargas en días distintos (ver "Verificaciones pendientes" en
+`docs/hallazgos-calidad.md`).
 
 El plan completo, las fases y las decisiones abiertas están en
 `docs/roadmap.md`. Consúltalo antes de proponer trabajo nuevo.
